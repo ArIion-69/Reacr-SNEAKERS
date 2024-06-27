@@ -1,8 +1,9 @@
 body
     margin: 0
-    font-family: 'Inter'
     background: #E7F6FF
     
+*
+    font-family: 'Inter'
 .wrapper
     max-width: 1080px
     background #ffff
@@ -40,15 +41,33 @@ main
                 
 main
     .showcase
-        &__title
-            font-weight: 700
-            ont-size: 32px
-            olor: #000
+        &-top
+            display: flex
             margin-bottom: 40px
+            align-items: center
+            justify-content: space-between
+            &__title
+                font-weight: 700
+                ont-size: 32px
+                olor: #000
+            &__search
+                border: 1px solid #f3f3f3;
+                border-radius: 10px;
+                padding: 0 15px 
+                display flex
+                align-items: center
+                input
+                    padding: 13px
+                    border:0
+                    font-weight: 400;
+                    font-size: 14px;
+                    width 200px
+                    &:placeholder
+                        color: #c4c4c4; 
         &-wraper
             display: grid
             grid-template-columns: repeat(4,210px)
-            gap 40px
+            gap 45px
             &-item
                 position relative
                 border: 1px solid #f3f3f3;
@@ -60,6 +79,9 @@ main
                     font-size: 14px;
                     color: #000;
                     margin-bottom 14px
+                &-favorite
+                    position: absolute
+                    cursor: pointer
                 &__suptitle
                     font-weight: 500;
                     font-size: 11px;
@@ -81,4 +103,3 @@ main
                     height 32px 
                     width 32px
                     cursor pointer
-                    

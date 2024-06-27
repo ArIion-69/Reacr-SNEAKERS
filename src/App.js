@@ -32,122 +32,18 @@ function App() {
       
       <main>
         <div className="showcase">
-          <h1 className='showcase__title'>Все кроссовки</h1>
+          <div className="showcase-top">
+            <h1 className='showcase-top__title'>Все кроссовки</h1>
+            <div className="showcase-top__search">
+              <img wight={14} height={14} src="/img/search.svg" alt="search" />
+              <input placeholder='Поиск...' />
+            </div>
+          </div>
           <div className="showcase-wraper">
             <div className="showcase-wraper-item">
+              <img className='showcase-wraper-item-favorite ' width={32} height={32} src="/img/like-icon.svg" alt="like" />
               <img width={133} height={112} src="/img/item/sneakers1.jpg" alt="item1" />
               <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers2.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers3.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers4.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers5.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers6.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers7.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers8.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers9.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers10.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers11.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
-              <span className='showcase-wraper-item__suptitle'>Цена:</span>
-              <span className='showcase-wraper-item__price'>12 999 руб.</span>
-              <button className='showcase-wraper__btn'>
-                <img width={11} height={11} src="/img/plus.svg" alt="plus-icon" />
-              </button>
-            </div>
-            <div className="showcase-wraper-item">
-              <img width={133} height={112} src="/img/item/sneakers12.jpg" alt="item1" />
-              <h2 className='showcase-wraper-item__title'>Мужские Кроссовки Nike Blazer Mid Suede</h2>
-              <div className="showcase-wraper-item__text"></div>
               <span className='showcase-wraper-item__suptitle'>Цена:</span>
               <span className='showcase-wraper-item__price'>12 999 руб.</span>
               <button className='showcase-wraper__btn'>
