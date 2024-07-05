@@ -1,27 +1,22 @@
-function DrawerCart() {
+function DrawerCart({onClose, items = [] }) {
+
     return (
-        <div style={{ display: 'none' }} className="wrapper-overlye">
+        <div className="wrapper-overlye">
             <div className="wrapper-aside">
                 <h2 className="wrapper-aside-title d-flex justify-between">Корзина
-                    <img className="aside-cartItem__icon" width="32" height="32" src="/img/btn-remove.svg" alt="remove" />
+                    <img onClick={onClose} className="aside-cartItem__icon" width="32" height="32" src="/img/btn-remove.svg" alt="remove" />
                 </h2>
                 <div className="aside-top">
+                    {items.map((obj)=>(
                     <div className="aside-cartItem d-flex align-center">
-                        <img className='aside-cartItem__img' width="70" height="70" src="/img/item/sneakers1.jpg" alt="item1" />
+                        <img className='aside-cartItem__img' width="70" height="70" src={obj.imageUrl} alt="item1" />
                         <div className="aside-cartItem-text">
-                            <p className="aside-cartItem-text__title">Мужские Кроссовки Nike Air Max 270</p>
-                            <b className="aside-cartItem-text__price">12 999 руб.</b>
+                            <p className="aside-cartItem-text__title">{obj.title}</p>
+                            <b className="aside-cartItem-text__price">{obj.price} руб.</b>
                         </div>
                         <img className="aside-cartItem__icon" width="32" height="32" src="/img/btn-remove.svg" alt="remove" />
                     </div>
-                    <div className="aside-cartItem d-flex align-center">
-                        <img className='aside-cartItem__img' width="70" height="70" src="/img/item/sneakers1.jpg" alt="item1" />
-                        <div className="aside-cartItem-text">
-                            <p className="aside-cartItem-text__title">Мужские Кроссовки Nike Air Max 270</p>
-                            <b className="aside-cartItem-text__price">12 999 руб.</b>
-                        </div>
-                        <img className="aside-cartItem__icon" width="32" height="32" src="/img/btn-remove.svg" alt="remove" />
-                    </div>
+                    ))}
 
                 </div>
 

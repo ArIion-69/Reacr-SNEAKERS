@@ -1,13 +1,34 @@
+import React from "react"
 import './main.styl';
-import Card from './components/Card'
-import Header from './components/Header'
-import DrawerCart from './components/DrawerCart'
+import Card from './components/Card';
+import Header from './components/Header';
+import DrawerCart from './components/DrawerCart';
 
 function App() {
+  const [items, setItems] = React.useState([])
+  const [cartItems, setCartItems] = React.useState([])
+  const [cartOpened, setCartOpened] = React.useState(false)
+  
+  React.useEffect(() => {
+    fetch('https://66872c010bc7155dc016e468.mockapi.io/items')
+      .then((res) => {
+        return res.json();
+      })
+      .then((json) => {
+        setItems(json);
+      });
+  }, []);
+  
+  const onAddToCard = (obj) => {
+    setCartItems(prev =>[... prev, obj])
+  };
+  
+  
+  
   return <div className="wrapper clear">
-      <DrawerCart/>
+      { cartOpened && <DrawerCart items={cartItems} onClose={() => setCartOpened(false)} />}
     
-      <Header/>
+      <Header onClickCart={() => setCartOpened(true)}/>
       
       <main>
         <div className="showcase">
@@ -20,7 +41,16 @@ function App() {
           </div>
           
           <div className="showcase-wraper">
-            <Card/>
+            {items.map((item) =>(
+              <Card 
+              title = {item.title}  
+              price = {item.price} 
+              imageUrl = {item.imageUrl}
+              onFavorite = {( ) => console.log('like')}
+              onPlus = {(obj) => onAddToCard(obj)}
+              />  
+            ))}
+
           </div>
         </div>
       </main>
